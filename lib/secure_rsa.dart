@@ -27,7 +27,7 @@ void main() {
   BigInt message = BigInt.from(2000);
   print('Original Message: $message');
 
-  if (message >= n) {
+  if (message >= (n - BigInt.one) || message <= BigInt.one) {
     throw ArgumentError('Message must be smaller than (modulus - 1) (1 < message < n -1) (n = $n).');
   }
 
